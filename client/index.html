@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting App</title>
+</head>
+<body>
+
+    <!-- If the server sent back a name, display the greeting -->
+    {% if name %}
+        <h1>Hello, {{ name }}!</h1>
+        <a href="/">Greet someone else</a>
+        
+    <!-- If no name exists yet, display the form -->
+    {% else %}
+        <h2>Enter your name:</h2>
+        <form action="/" method="post">
+            <input type="text" name="user_name" required placeholder="Your Name">
+            <input type="submit" value="Submit">
+        </form>
+    {% endif %}
+
+</body>
+</html>
